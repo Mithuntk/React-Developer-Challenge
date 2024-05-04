@@ -1,22 +1,36 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.container1{margin: 0%;
+  padding: 10px;
+
   
-  .row {
+}
+
+  
+  .row1 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    
+  
   }
   
   .searchBox {
     display: flex;
+    margin-left: 80%;
   }
   
-  .column {
+  .column1 {
     flex: 1;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #895959;
     padding: 5px;
   }
+  .title{width: 100%;
+    background-color: #bf2761;
+    padding: 10px;
+    color: white;
+  }
+  .row12{
+    background-color: #db7f7c;
+    width: 100%;
+  }
+  
   

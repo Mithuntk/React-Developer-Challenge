@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Page1 from './Components/main/page1';
 import Page2 from './Components/new/page2';
+import './App.css'
 
 function App() {
   const [invoiceData, setInvoiceData] = useState({});

@@ -48,12 +48,13 @@ function Page2({ onSave }) {
   return (
     <div className="container">
       <Page1/>
-      <div className="row">
+      <div className='container2'>
+      <div className="row2">
         <h2>Create Invoice</h2>
       </div>
-      <div className="row">
+      <div className="row2">
         <div className="inputContainer">
-          <label>Invoice Number:</label>
+          <label>Invoice No:</label>
           <input type="text" name="invoiceNumber" value={formData.invoiceNumber} onChange={(e) => setFormData({ ...formData, invoiceNumber: e.target.value })} />
         </div>
         <div className="inputContainer">
@@ -62,15 +63,15 @@ function Page2({ onSave }) {
         </div>
         <button onClick={handleAddItem}>Add</button>
       </div>
-      <div className="row">
-        <div className="column">Item ID</div>
-        <div className="column">Item Name</div>
-        <div className="column">Price</div>
-        <div className="column">Tax</div>
-        <div className="column">Sub Total</div>
+      <div className="row2" style={{backgroundColor:"#fbaeb4"}}>
+        <div className="column2">Item ID</div>
+        <div className="column2">Item Name</div>
+        <div className="column2">Price</div>
+        <div className="column2">Tax</div>
+        <div className="column2">Sub Total</div>
       </div>
       {formData.items.map((item, index) => (
-        <div className="row" key={index}>
+        <div className="row2" key={index} >
           <input type="text" name="itemId" value={item.itemId} onChange={(e) => handleInputChange(index, e)} />
           <input type="text" name="itemName" value={item.itemName} onChange={(e) => handleInputChange(index, e)} />
           <input type="text" name="price" value={item.price} onChange={(e) => handleInputChange(index, e)} />
@@ -78,26 +79,27 @@ function Page2({ onSave }) {
           <input type="text" name="subtotal" value={item.subtotal} readOnly />
         </div>
       ))}
-      <div className="row">
-        <div className="column">Total Price:</div>
-        <div className="column">
+      <div className="row23" style={{ width: "90%" }}>
+        <div className="column21">Total Price:</div>
+        <div className="column21">
           <input type="text" value={formData.totalPrice.toFixed(2)} readOnly />
         </div>
       </div>
-      <div className="row">
-        <div className="column">Total Tax:</div>
-        <div className="column">
+      <div className="row23" style={{ width: "90%" }}>
+        <div className="column21">Total Tax:</div>
+        <div className="column21">
           <input type="text" value={formData.totalTax.toFixed(2)} readOnly />
         </div>
       </div>
-      <div className="row">
-        <div className="column">Grand Total:</div>
-        <div className="column">
+      <div className="row23" style={{ width: "90%" }}>
+        <div className="column21">Grand Total:</div>
+        <div className="column21">
           <input type="text" value={formData.grandTotal.toFixed(2)} readOnly />
         </div>
       </div>
-      <div className="row">
+      <div className="row2">
         <button onClick={handleSaveClick}>Save</button>
+      </div>
       </div>
     </div>
   );
