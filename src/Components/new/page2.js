@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import './page2.css'; 
+import { useNavigate } from 'react-router-dom';
+import './page2.css';
+import Page1 from '../main/page1';
 
 function Page2({ onSave }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     invoiceNumber: '',
     date: '',
@@ -39,10 +42,12 @@ function Page2({ onSave }) {
 
   const handleSaveClick = () => {
     onSave(formData);
+    navigate('/', { state: formData });
   };
 
   return (
     <div className="container">
+      <Page1/>
       <div className="row">
         <h2>Create Invoice</h2>
       </div>
@@ -69,7 +74,7 @@ function Page2({ onSave }) {
           <input type="text" name="itemId" value={item.itemId} onChange={(e) => handleInputChange(index, e)} />
           <input type="text" name="itemName" value={item.itemName} onChange={(e) => handleInputChange(index, e)} />
           <input type="text" name="price" value={item.price} onChange={(e) => handleInputChange(index, e)} />
-          <input type="text" name="tax" value={item.tax + '.00%'} onChange={(e) => handleInputChange(index, e)} />
+          <input type="text" name="tax" value={item.tax } onChange={(e) => handleInputChange(index, e)} />
           <input type="text" name="subtotal" value={item.subtotal} readOnly />
         </div>
       ))}
