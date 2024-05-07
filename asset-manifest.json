@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Developer-Challenge/static/css/main.914eebc6.css",
+    "main.js": "/React-Developer-Challenge/static/js/main.b482d63b.js",
+    "index.html": "/React-Developer-Challenge/index.html",
+    "main.914eebc6.css.map": "/React-Developer-Challenge/static/css/main.914eebc6.css.map",
+    "main.b482d63b.js.map": "/React-Developer-Challenge/static/js/main.b482d63b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.914eebc6.css",
+    "static/js/main.b482d63b.js"
+  ]
+}
